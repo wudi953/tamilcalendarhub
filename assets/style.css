@@ -1,0 +1,111 @@
+/* ===== Tamil Calendar 2027 — shared styles ===== */
+:root {
+  --bg: #fff8f0;
+  --card: #ffffff;
+  --accent: #c2410c;
+  --accent-2: #b45309;
+  --gold: #fef3c7;
+  --fest: #fde68a;
+  --text: #292018;
+  --muted: #6d5c4d;
+  --line: #ecdcc8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+header.site {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  padding: 14px 0; border-bottom: 2px solid var(--line);
+}
+.brand { font-weight: 800; color: var(--accent); text-decoration: none; font-size: 1.05rem; }
+nav.main a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: .92rem; }
+nav.main a:hover { color: var(--accent); }
+
+.crumb { font-size: .82rem; color: var(--muted); margin: 14px 0 4px; }
+.crumb a { color: var(--accent); text-decoration: none; }
+
+.hero { padding: 22px 0 8px; }
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  color: var(--accent-2);
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+h2 { font-size: 1.35rem; margin: 26px 0 10px; color: var(--accent-2); }
+h3 { font-size: 1.05rem; margin: 18px 0 6px; }
+p { margin-bottom: 12px; }
+section { margin-bottom: 26px; }
+a { color: var(--accent); }
+
+.lead { color: var(--muted); font-size: 1.05rem; }
+.facts {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px; margin: 14px 0;
+}
+.fact { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: .92rem; }
+.fact b { color: var(--accent-2); }
+
+/* calendar table scrolls inside its wrapper; the page itself never scrolls sideways */
+.cal-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0; }
+table.cal { border-collapse: collapse; min-width: 560px; width: 100%; background: var(--card); }
+table.cal th, table.cal td {
+  border: 1px solid var(--line); text-align: center; padding: 8px 6px; font-size: .9rem;
+}
+table.cal th { background: var(--gold); color: var(--accent-2); font-weight: 700; }
+table.cal td.empty { background: #faf3e8; border-color: #f3e8d8; }
+table.cal td.fest { background: var(--fest); font-weight: 700; }
+table.cal td.hol { background: #ffe4e6; font-weight: 600; }
+.legend { font-size: .85rem; color: var(--muted); }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin: 0 4px 0 8px; }
+.dot.f { background: var(--fest); border: 1px solid var(--accent-2); }
+.dot.h { background: #ffe4e6; border: 1px solid #e4a3a8; }
+
+ul.fest-list { list-style: none; }
+ul.fest-list li { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+ul.fest-list li:last-child { border-bottom: none; }
+ul.fest-list .d { color: var(--accent-2); font-weight: 700; }
+
+blockquote.wish {
+  background: var(--gold); border-left: 4px solid var(--accent);
+  padding: 12px 16px; border-radius: 8px; margin: 10px 0 4px;
+  font-size: 1.15rem;
+}
+.ta { font-family: "Noto Serif Tamil", "Latha", "Nirmala UI", serif; }
+.tr { color: var(--muted); font-size: .9rem; }
+
+details.faq { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin-bottom: 10px; }
+details.faq summary { cursor: pointer; font-weight: 600; }
+details.faq p { margin: 8px 0 0; color: var(--muted); }
+
+.prevnext { display: flex; justify-content: space-between; gap: 12px; margin: 26px 0; flex-wrap: wrap; }
+.prevnext a {
+  flex: 1 1 200px; text-align: center; background: var(--card);
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px; text-decoration: none; color: var(--accent-2); font-weight: 600;
+}
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.card {
+  display: block; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 14px; text-decoration: none; color: var(--text);
+}
+.card:hover { border-color: var(--accent); }
+.card b { color: var(--accent-2); display: block; margin-bottom: 4px; }
+.card span { color: var(--muted); font-size: .85rem; }
+
+footer.site {
+  border-top: 2px solid var(--line); margin-top: 30px; padding: 20px 0 34px;
+  color: var(--muted); font-size: .85rem; text-align: center;
+}
+footer.site a { color: var(--accent); text-decoration: none; }
+
+@media (max-width: 480px) {
+  nav.main a { margin-left: 10px; }
+  h1 { font-size: 1.55rem; }
+}
