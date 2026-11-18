@@ -24,7 +24,8 @@ header.site {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   padding: 14px 0; border-bottom: 2px solid var(--line);
 }
-.brand { font-weight: 800; color: var(--accent); text-decoration: none; font-size: 1.05rem; }
+.brand { display: inline-flex; align-items: center; text-decoration: none; }
+.brand img { display: block; height: 44px; width: auto; max-width: 100%; }
 nav.main a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: .92rem; }
 nav.main a:hover { color: var(--accent); }
 
