@@ -46,6 +46,18 @@ p { margin-bottom: 12px; }
 section { margin-bottom: 26px; }
 a { color: var(--accent); }
 
+.btn-download {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 14px 0 4px;
+}
+.btn-download:hover { background: var(--accent-2); color: #fff; }
+
 .lead { color: var(--muted); font-size: 1.05rem; }
 .facts {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -113,7 +125,7 @@ footer.site a { color: var(--accent); text-decoration: none; }
 /* Print and save-as-PDF styles */
 @media print {
   @page { size: A4 portrait; margin: 12mm 10mm 16mm; }
-  header.site, nav.main, .crumb, .prevnext, footer.site { display: none !important; }
+  header.site, nav.main, .crumb, .prevnext, footer.site, .btn-download { display: none !important; }
   body { background: #fff !important; color: #000; font-size: 11pt; }
   .wrap { max-width: 100%; padding: 0; }
   a { color: #000 !important; text-decoration: none; }
